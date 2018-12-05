@@ -2,7 +2,7 @@
 
 ##################################################
 #
-# Basic configuration settings solr persistent volumes.
+# Basic configuration settings zookeeper persistent volumes.
 #
 # The file defines some variables that can be used in other scripts by
 # including it with: source config.sh

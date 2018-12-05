@@ -2,7 +2,7 @@
 
 ##################################################
 #
-# This script installs the zookeeper helm chart
+# This script installs Apache Zookeeper
 #
 ##################################################
 

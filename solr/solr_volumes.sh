@@ -9,6 +9,8 @@
 
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
+# solr_config sets the variables
+# PV_PATH, PV_SIZE, PV_VOLUMES_PER_NODE 
 source ${0%/*}/solr_config.sh
 
 source ${0%/*}/../conf/nodelist.sh
