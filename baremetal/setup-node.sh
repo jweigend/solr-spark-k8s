@@ -8,11 +8,17 @@ function cleanNode() {
     rm -rf /var/lib/solr
     rm -rf /var/lib/spark
     rm -rf /var/lib/zeppelin
+    yum -y remove java
+}
+
+function installJava() {
+     yum -y install java
 }
 
 function prepareNode() {
     mkdir -p /opt/software
     mkdir -p /opt/downloads
+    installJava
 }
 
 function downloadSoftware() {

@@ -2,4 +2,4 @@
 # Zookeeper start script
 #
 cd /opt/zookeeper
-bin/zkServer.sh start &
+bin/zkServer.sh start
