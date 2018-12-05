@@ -13,3 +13,4 @@
 PV_PATH="/data/zookeeper"
 PV_SIZE="5Gi"
 PV_VOLUMES_PER_NODE="1" # max=10
+PV_STORAGE_CLASS_NAME="zookeeper-data"

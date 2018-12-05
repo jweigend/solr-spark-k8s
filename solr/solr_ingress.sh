@@ -2,7 +2,7 @@
 
 ##################################################
 #
-# The script installs Apache Solr
+# The script installs the inges for Apache Solr
 #
 ##################################################
 
