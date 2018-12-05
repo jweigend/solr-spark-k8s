@@ -65,7 +65,6 @@ function configureZookeeper() {
     mkdir -p /opt/zookeeper/conf
     cp ./zookeeper/zoo.cfg /opt/zookeeper/conf
     hostname | sed -r 's/node([0-9]*)\..*/\1/g' > /var/lib/zookeeper/myid
-    echo todo > /var/lib/zookeeper/myid
     cp ./zookeeper/start-zk.sh /opt
 }
 
