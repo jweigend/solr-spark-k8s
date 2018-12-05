@@ -70,19 +70,19 @@ function configureZookeeper() {
 }
 
 function configureSolr() {
-
+    echo "Configure Solr"
 }
 
 function configureSpark() {    
-
+    echo "Configure Spark"
 }
 
 function configureZeppelin() {
-
+    echo "Configure Zeppelin"
 }
 
 function configureHadoop() {
-
+    echo "Configure Hadoop"
 }
 
 prepareNode
