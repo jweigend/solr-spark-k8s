@@ -70,15 +70,19 @@ function configureZookeeper() {
 }
 
 function configureSolr() {
+
 }
 
 function configureSpark() {    
+
 }
 
 function configureZeppelin() {
+
 }
 
 function configureHadoop() {
+
 }
 
 prepareNode
