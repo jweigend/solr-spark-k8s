@@ -10,13 +10,13 @@ function cleanNode() {
 }
 
 function prepareNode() {
-    mkdir /opt
-    mkdir /opt/software
-    mkdir /opt/downloads
+    mkdir -p /opt/software
+    mkdir -p /opt/downloads
 }
 
 function downloadSoftware() {
     cd /opt/downloads
+    
     curl -O http://apache.lauf-forum.at/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz
     tar xvf zookeeper-3.4.13.tar.gz 
     mv zookeeper-3.4.13 ../software
@@ -43,8 +43,18 @@ function downloadSoftware() {
     ln -s /opt/software/hadoop-2.7.7 /opt/hadoop
 }
 
+function configureSoftware() {
+    configureZookeeper
+}
+
+function configureZookeeper() {
+    mkdir -p /var/lib/zookeeper
+    
+}
 
 
 
 prepareNode
 downloadSoftware
+configureSoftware
+
