@@ -62,10 +62,8 @@ function configureSoftware() {
 #
 function configureZookeeper() {
     mkdir -p /var/lib/zookeeper
-    mkdir -p /opt/zookeeper/conf
-    #cp ./zookeeper/zoo.cfg /opt/zookeeper/conf
     hostname | sed -r 's/node([0-9]*)\..*/\1/g' > /var/lib/zookeeper/myid
-    #cp ./zookeeper/start-zk.sh /opt
+    mkdir -p /opt/zookeeper/conf
 }
 
 function configureSolr() {
@@ -84,7 +82,6 @@ function configureHadoop() {
     echo "Configure Hadoop"
 }
 
-prepareNode
-downloadSoftware
+# prepareNode
+# downloadSoftware
 configureSoftware
-
