@@ -1,6 +1,13 @@
 #
 # This script prepares all nodes for installation
 #
+function cleanNode() {
+    rm -rf /opt
+    rm -rf /var/lib/zookeeper
+    rm -rf /var/lib/solr
+    rm -rf /var/lib/spark
+    rm -rf /var/lib/zeppelin
+}
 
 function prepareNode() {
     mkdir /opt
@@ -28,8 +35,16 @@ function downloadSoftware() {
     curl -O http://apache.lauf-forum.at/zeppelin/zeppelin-0.8.0/zeppelin-0.8.0-bin-all.tgz
     tar xvf zeppelin-0.8.0-bin-all.tgz 
     mv zeppelin-0.8.0-bin-all ../software
-    ln -s /opt/software/zeppelin-0.8.0-bin-all.tgz /opt/zeppelin
+    ln -s /opt/software/zeppelin-0.8.0-bin-all /opt/zeppelin
+
+    curl -O http://apache.lauf-forum.at/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz
+    tar xvf hadoop-2.7.7.tar.gz
+    mv hadoop-2.7.7 ../software
+    ln -s /opt/software/hadoop-2.7.7 /opt/hadoop
 }
+
+
+
 
 prepareNode
 downloadSoftware
