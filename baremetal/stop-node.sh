@@ -1,4 +1,4 @@
-/opt/start-zk.sh
-/opt/start-solr.sh
-/opt/start-worker.sh
+/opt/stop-zk.sh
+/opt/stop-solr.sh
+/opt/stop-worker.sh
 

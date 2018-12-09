@@ -1,7 +1,7 @@
 #
-# Spark start script
+# Spark stop script
 #
 cd /opt/spark
-sbin/start-master.sh --webui-port 9999
+sbin/stop-master.sh 
 
 
