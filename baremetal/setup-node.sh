@@ -85,7 +85,7 @@ function configureSolr() {
 
 function configureSpark() {    
     echo "Configure Spark"
-    scp $LOCALPATH/spark/*spark.sh /opt
+    scp $LOCALPATH/spark/*.sh /opt
 }
 
 function configureZeppelin() {
