@@ -14,7 +14,8 @@ help :
 	@echo " - stop          "
 	@echo "--------------------------------------------------------------------------------------------------------"
 
-install: setup-nodes.sh
+install: 
+	setup-nodes.sh
 
 clean:
 	echo TODO
