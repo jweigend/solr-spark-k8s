@@ -15,13 +15,13 @@ help :
 	@echo "--------------------------------------------------------------------------------------------------------"
 
 install: 
-	setup-nodes.sh
+	./setup-nodes.sh
 
 clean:
 	echo TODO
 
 start:
-	start-nodes.sh
+	./start-nodes.sh
 
 stop:
-	stop-nodes.sh
+	./stop-nodes.sh
