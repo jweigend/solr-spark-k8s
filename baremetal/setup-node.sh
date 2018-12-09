@@ -75,23 +75,22 @@ function configureZookeeper() {
     hostname | sed -r 's/node([0-9]*)\..*/\1/g' > /var/lib/zookeeper/myid
     mkdir -p /opt/zookeeper/conf
     scp $LOCALPATH/zookeeper/zoo.cfg /opt/zookeeper/conf
-    scp $LOCALPATH/zookeeper/start-zk.sh /opt
+    scp $LOCALPATH/zookeeper/*zk.sh /opt
 }
 
 function configureSolr() {
     echo "Configure Solr"
-    scp $LOCALPATH/solr/start-solr.sh /opt
+    scp $LOCALPATH/solr/*solr.sh /opt
 }
 
 function configureSpark() {    
     echo "Configure Spark"
-    scp $LOCALPATH/spark/start-master.sh /opt
-    scp $LOCALPATH/spark/start-worker.sh /opt
+    scp $LOCALPATH/spark/*spark.sh /opt
 }
 
 function configureZeppelin() {
    echo "Configure Zeppelin"
-   scp $LOCALPATH/zeppelin/start-zeppelin.sh /opt
+   scp $LOCALPATH/zeppelin/*zeppelin.sh /opt
 }
 
 function configureHadoop() { 
