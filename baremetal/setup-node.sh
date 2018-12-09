@@ -71,20 +71,22 @@ function configureZookeeper() {
     hostname | sed -r 's/node([0-9]*)\..*/\1/g' > /var/lib/zookeeper/myid
     mkdir -p /opt/zookeeper/conf
     cp zookeeper/zoo.cfg /opt
-    chown -R cloud:root /opt/zookeeper
     cp zookeeper/start-zk.sh /opt
 }
 
 function configureSolr() {
     echo "Configure Solr"
+    cp solr/start-solr.sh /opt
 }
 
 function configureSpark() {    
     echo "Configure Spark"
-}
+    cp spark/start-master.sh /opt
+}   cp spark/start-worker.sh /opt
 
 function configureZeppelin() {
-    echo "Configure Zeppelin"
+   echo "Configure Zeppelin"
+   cp zeppelin/start-zeppelin.sh /opt
 }
 
 function configureHadoop() {
