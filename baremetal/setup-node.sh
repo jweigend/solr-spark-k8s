@@ -61,6 +61,7 @@ function configureSoftware() {
     configureSpark
     configureZeppelin
     configureHadoop
+    configureCluster
 }
 
 export LOCALPATH=node0:/home/cloud/solr-spark-k8s/baremetal
@@ -70,7 +71,8 @@ export LOCALPATH=node0:/home/cloud/solr-spark-k8s/baremetal
 #
 function configureZookeeper() {
     sudo mkdir -p /var/lib/zookeeper
-    sudo sh -c "hostname | sed -r 's/node([0-9]*)\..*/\1/g' > /var/lib/zookeeper/myid"
+    sudo chown -R cloud:root /var/lib/zookeeper
+    hostname | sed -r 's/node([0-9]*)\..*/\1/g' > /var/lib/zookeeper/myid
     mkdir -p /opt/zookeeper/conf
     scp $LOCALPATH/zookeeper/zoo.cfg /opt/zookeeper/conf
     scp $LOCALPATH/zookeeper/start-zk.sh /opt
@@ -92,8 +94,12 @@ function configureZeppelin() {
    scp $LOCALPATH/zeppelin/start-zeppelin.sh /opt
 }
 
-function configureHadoop() {
+function configureHadoop() { 
     echo "Configure Hadoop"
+}
+
+function configureCluster() {
+  scp $LOCALPATH/start-node.sh /opt
 }
 
 # prepareNode

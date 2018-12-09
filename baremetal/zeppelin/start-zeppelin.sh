@@ -2,5 +2,5 @@
 # Zeppelin start script
 #
 cd /opt/zeppelin
-bin/zeppelin
+bin/zeppelin-daemon.sh start
 
