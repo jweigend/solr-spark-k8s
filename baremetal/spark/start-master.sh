@@ -2,5 +2,5 @@
 # Spark start script
 #
 cd /opt/spark
-bin/master
+sbin/start-master.sh
 
