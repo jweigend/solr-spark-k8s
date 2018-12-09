@@ -70,6 +70,9 @@ function configureZookeeper() {
     mkdir -p /var/lib/zookeeper
     hostname | sed -r 's/node([0-9]*)\..*/\1/g' > /var/lib/zookeeper/myid
     mkdir -p /opt/zookeeper/conf
+    cp zookeeper/zoo.cfg /opt
+    chown -R cloud:root /opt/zookeeper
+    cp zookeeper/start-zk.sh /opt
 }
 
 function configureSolr() {
