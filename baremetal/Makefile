@@ -1,7 +1,7 @@
 help :
 	clear
 	@echo "--------------------------------------------------------------------------------------------------------"
-	@echo " Solr Spark Showcase"
+	@echo " Solr Spark Showcase installs Zookeeper, Solr, Spark, Hadoop and Zeppelin"
 	@echo "--------------------------------------------------------------------------------------------------------"
 	@echo " usage: make <target>"
 	@echo " valid targets are:"
