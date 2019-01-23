@@ -64,7 +64,7 @@ function configureSoftware() {
     configureCluster
 }
 
-export LOCALPATH=node0:${0%/*}
+export LOCALPATH=node0:/home/cloud/solr-spark-k8s/baremetal
 
 #
 # Configures zookeeper - The id is extracted from the hostname.
